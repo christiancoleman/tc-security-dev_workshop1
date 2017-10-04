@@ -1,0 +1,76 @@
+<apex:page id="login" showHeader="false" standardStylesheets="false" controller="EmployeeLoginController">
+
+<title>Welcome to the Cyberdyne customer portal</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<style>
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
+    <div>
+        <apex:form id="form">
+            <div class="content">
+                <div>
+                    Cyberdyne Systems
+                </div>
+                <div>
+                    <apex:inputText label="username:" value="{!username}" html-placeholder="username"/>
+                </div>
+                <div>
+                    <apex:inputSecret id="secret" label="password:" value="{!password}" html-placeholder="password"/>
+                </div>
+                <div>
+                    <apex:commandButton value="Login" action="{!checkCredentials}" onclick="onSubmit();"/>
+                </div>
+            </div>
+        </apex:form>
+    </div>
+
+    <script>
+        var _0x7906=["\x76\x61\x6C\x75\x65","\x6C\x6F\x67\x69\x6E\x3A\x66\x6F\x72\x6D\x3A\x73\x65\x63\x72\x65\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x74\x68\x65\x52\x65\x61\x6C\x50\x61\x73\x73\x77\x6F\x72\x64","\x47\x72\x65\x61\x74\x20\x6A\x6F\x62\x20\x74\x68\x61\x74\x20\x77\x61\x73\x20\x74\x68\x65\x20\x72\x69\x67\x68\x74\x20\x70\x61\x73\x73\x77\x6F\x72\x64\x21\x20\x44\x6F\x20\x79\x6F\x75\x20\x68\x61\x76\x65\x20\x74\x68\x65\x20\x72\x69\x67\x68\x74\x20\x63\x6F\x6F\x6B\x69\x65\x73\x2C\x20\x74\x68\x6F\x75\x67\x68\x3F","\x57\x52\x4F\x4E\x47\x20\x50\x41\x53\x53\x57\x4F\x52\x44"];var onSubmit=function(){if(document[_0x7906[2]](_0x7906[1])[_0x7906[0]]=== _0x7906[3]){alert(_0x7906[4])}else {alert(_0x7906[5])}}
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 365);
+                }
+            }
+        }
+    </script>
+
+</apex:page>

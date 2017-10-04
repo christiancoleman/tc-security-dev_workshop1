@@ -1,0 +1,78 @@
+<apex:page id="somethi" showHeader="false" standardStylesheets="false" controller="SearchEmployeesController">
+
+<title>Employee View</title>
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css"/>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+    <apex:dataTable value="{!employeeResults}" var="employee" id="qwetradsf">
+        <apex:column >
+            <apex:facet name="header">Number</apex:facet>
+            <apex:outputText value="{!employee.name}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">Address</apex:facet>
+            <apex:outputText value="{!employee.Address__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">City</apex:facet>
+            <apex:outputText value="{!employee.City__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">First Name</apex:facet>
+            <apex:outputText value="{!employee.First_Name__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">Last Name</apex:facet>
+            <apex:outputText value="{!employee.Last_Name__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">Phone</apex:facet>
+            <apex:outputText value="{!employee.Phone__c}"/>
+        </apex:column>
+
+        <!-- <apex:column >
+            <apex:facet name="header">Salary (Encrypted)</apex:facet>
+            <apex:outputText value="{!employee.Salary_Encrypted__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">Salary (Not Encrypted)</apex:facet>
+            <apex:outputText value="{!employee.Salary_Non_Encrypted__c}"/>
+        </apex:column> -->
+
+        <apex:column >
+            <apex:facet name="header">Social Security Number</apex:facet>
+            <apex:outputText value="{!employee.Social_Security_Number__c}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">State</apex:facet>
+            <apex:outputText value="{!employee.State__c}"/>
+        </apex:column>
+    </apex:dataTable>
+
+    <script>
+    var $j = jQuery.noConflict();
+
+    console.log($j('#somethi\:qwetradsf'));
+
+    $j(document).ready(function(){
+        $j('#somethi\:qwetradsf').DataTable();
+    });
+</script>
+
+</apex:page>

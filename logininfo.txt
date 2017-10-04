@@ -1,0 +1,3 @@
+sf.username = admin@cyberdyne.com
+sf.password = theBiebster4evar
+sf.token = AAABBBCCCDDDEEEFFF11223344
