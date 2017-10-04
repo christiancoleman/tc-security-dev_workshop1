@@ -12,6 +12,6 @@ public without sharing class OrderHistoryController {
 								'Order_Date__c, Product_Purchased__r.Name ' +
 								'FROM Order__c WHERE Customer__c = \'';
 
-		orders = Database.query(queryString + customerID + '\'');
+		orders = Database.query(queryString + '' + '\'');
 	}
 }

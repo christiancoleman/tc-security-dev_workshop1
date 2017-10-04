@@ -30,17 +30,23 @@
 
 	<div class="container-fluid">
 		<apex:form id="form">
-			<div class="content">
-				<div>
-					Cyberdyne Systems
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Employee Login</h1>
 				</div>
-				<div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
 					<apex:inputText label="username:" value="{!username}" html-placeholder="username"/>
 				</div>
-				<div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
 					<apex:inputSecret id="secret" label="password:" value="{!password}" html-placeholder="password"/>
 				</div>
-				<div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
 					<apex:commandButton value="Login" action="{!checkCredentials}" onclick="onSubmit();"/>
 				</div>
 			</div>

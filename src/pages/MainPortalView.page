@@ -47,7 +47,7 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<!-- show any time -->
-				<a href="/SerchProducts">Find a product:</a>
+				<a href="/SearchProducts">Find a product:</a>
 			</div>
 			<div class="col-lg-6">
 				<input type="text" value=""/>
@@ -82,7 +82,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<!-- only show if logged in as an employee AND an admin  -->
-				<a href="/CustomAdminControlPanel">Admin Control Panel</a>
+				<a href="/AdminCP">Admin Control Panel</a>
 			</div>
 		</div>
 	</div>
