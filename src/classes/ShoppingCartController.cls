@@ -1,2 +1,2 @@
-public class ShoppingCartController {
+public without sharing class ShoppingCartController {
 }

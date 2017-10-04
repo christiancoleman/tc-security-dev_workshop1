@@ -1,4 +1,4 @@
-public with sharing class CustomerLoginController{
+public without sharing class CustomerLoginController{
 
     public CustomerLoginController() {
 

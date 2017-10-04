@@ -1,3 +1,3 @@
-public class AdminCPController {
+public without sharing class AdminCPController {
 
 }

@@ -1,4 +1,4 @@
-public with sharing class OrderHistoryController {
+public without sharing class OrderHistoryController {
 	
 	public List<Order__c> orders {public get; private set;}
 

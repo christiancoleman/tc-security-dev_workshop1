@@ -1,4 +1,4 @@
-public class EmployeeLoginController{
+public without sharing class EmployeeLoginController{
 
     public String username {get; set;}
     public String password {get; set;}

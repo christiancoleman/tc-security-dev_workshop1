@@ -1,2 +1,2 @@
-public class SearchCasesController {
+public without sharing class SearchCasesController {
 }

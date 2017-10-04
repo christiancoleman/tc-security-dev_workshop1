@@ -1,4 +1,4 @@
-public with sharing class CaseViewController {
+public without sharing class CaseViewController {
 	public List<Case> cases {get; set;}
 	public String contactNumber = '';
 

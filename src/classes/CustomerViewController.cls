@@ -1,2 +1,2 @@
-public class CustomerViewController {
+public without sharing class CustomerViewController {
 }

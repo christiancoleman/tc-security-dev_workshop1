@@ -1,2 +1,2 @@
-public class SearchProductsController {
+public without sharing class SearchProductsController {
 }

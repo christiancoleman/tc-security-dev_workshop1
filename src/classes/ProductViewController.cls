@@ -1,2 +1,2 @@
-public class ProductViewController{
+public without sharing class ProductViewController{
 }

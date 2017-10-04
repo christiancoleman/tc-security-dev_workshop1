@@ -2,6 +2,8 @@
 
 	<head>
 
+		<title>Find employee</title>
+
 		<!-- Bootstrap - Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
@@ -20,51 +22,55 @@
 
 	</head>
 
-	<apex:dataTable value="{!employeeResults}" var="employee" id="qwetradsf">
-		<apex:column >
-			<apex:facet name="header">Number</apex:facet>
-			<apex:outputText value="{!employee.name}"/>
-		</apex:column>
+	<div class="container-fluid">
 
-		<apex:column >
-			<apex:facet name="header">Address</apex:facet>
-			<apex:outputText value="{!employee.Address__c}"/>
-		</apex:column>
+		<apex:dataTable value="{!employeeResults}" var="employee" id="qwetradsf">
+			<apex:column >
+				<apex:facet name="header">Number</apex:facet>
+				<apex:outputText value="{!employee.name}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">City</apex:facet>
-			<apex:outputText value="{!employee.City__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">Address</apex:facet>
+				<apex:outputText value="{!employee.Address__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">First Name</apex:facet>
-			<apex:outputText value="{!employee.First_Name__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">City</apex:facet>
+				<apex:outputText value="{!employee.City__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">Last Name</apex:facet>
-			<apex:outputText value="{!employee.Last_Name__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">First Name</apex:facet>
+				<apex:outputText value="{!employee.First_Name__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">Phone</apex:facet>
-			<apex:outputText value="{!employee.Phone__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">Last Name</apex:facet>
+				<apex:outputText value="{!employee.Last_Name__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">Salary</apex:facet>
-			<apex:outputText value="{!employee.Salary_Non_Encrypted__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">Phone</apex:facet>
+				<apex:outputText value="{!employee.Phone__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">Social Security Number</apex:facet>
-			<apex:outputText value="{!employee.Social_Security_Number__c}"/>
-		</apex:column>
+			<apex:column >
+				<apex:facet name="header">Salary</apex:facet>
+				<apex:outputText value="{!employee.Salary__c}"/>
+			</apex:column>
 
-		<apex:column >
-			<apex:facet name="header">State</apex:facet>
-			<apex:outputText value="{!employee.State__c}"/>
-		</apex:column>
-	</apex:dataTable>
+			<apex:column >
+				<apex:facet name="header">Social Security Number</apex:facet>
+				<apex:outputText value="{!employee.Social_Security_Number__c}"/>
+			</apex:column>
+
+			<apex:column >
+				<apex:facet name="header">State</apex:facet>
+				<apex:outputText value="{!employee.State__c}"/>
+			</apex:column>
+		</apex:dataTable>
+
+	</div>
 
 </apex:page>
