@@ -1,4 +1,4 @@
-<apex:page showHeader="false" sidebar="false" controller="MainPortalViewController">
+<apex:page showHeader="true" sidebar="false" controller="MainPortalViewController">
 	
 	<head>
 
@@ -20,57 +20,69 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+		<style>
+			.container-fluid {
+				text-align: center;
+			}
+		</style>
+
 	</head>
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col">
-				Cyberdyne Stores
+			<div class="col-lg-6">
+				<!-- only show if not logged in -->
+				<a href="/CustomerLogin">Customer Login</a>
+			</div>
+			<div class="col-lg-6">
+				<!-- only show if not logged in -->
+				<a href="/EmployeeLogin">Employee Login</a>
 			</div>
 		</div>
 		<div class="row">
-			<div>
-				Find products...
+			<div class="col-lg-12">
+				<h1>Cyberdyne Stores</h1>
 			</div>
-			<div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<!-- show any time -->
+				<a href="/SerchProducts">Find a product:</a>
+			</div>
+			<div class="col-lg-6">
 				<input type="text" value=""/>
 			</div>
 		</div>
 		<div class="row">
-			<div>
-				<a href="/SearchEmployees?firstname=Hariet">Find employees</a>
-			</div>
-			<div>
-				<a href="/CustomAdminControlPanel">/apex/CustomAdminControlPanel</a>
-			</div>
-			<div>
-				<a href="/CD_Login1">/apex/CD_Login1</a>
-			</div>
-			<div>
-				<a href="/CaseView">/apex/CaseView</a>
-			</div>
-			<div>
-				<a href="/TableOfContents">/apex/TableOfContents</a>
-			</div>
-			<div>
-				<a href="/OrderHistory">/apex/OrderHistory</a>
-			</div>
-			<div>
-				<a href="/ShoppingCart">/apex/ShoppingCart</a>
-			</div>
-			<div>
-				<a href="/SearchItems">/apex/SearchItems</a>
-			</div>
-			<div>
-				<a href="/ItemView">/apex/ItemView</a>
+			<div class="col-lg-12">
+				<a href="/ShoppingCart">View Shopping Cart</a>
 			</div>
 		</div>
 		<div class="row">
-			<div>
-				<a href="/CustomerLogin">Customer Login</a>
+			<div class="col-lg-12">
+				<!-- show if logged in as a customer -->
+				<a href="/OrderHistory">Order History</a>
 			</div>
-			<div>
-				<a href="/EmployeeLogin">Employee Login</a>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- only show if logged in as a customer -->
+				<a href="/SearchCases">Open Cases</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<!-- only show if logged in as an employee -->
+				<a href="/SearchEmployees?firstname=Hariet">Find an employee:</a>
+			</div>
+			<div class="col-lg-6">
+				<input type="text" value=""/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- only show if logged in as an employee AND an admin  -->
+				<a href="/CustomAdminControlPanel">Admin Control Panel</a>
 			</div>
 		</div>
 	</div>

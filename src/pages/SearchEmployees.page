@@ -1,4 +1,4 @@
-<apex:page id="somethi" showHeader="false" standardStylesheets="false" controller="SearchEmployeesController">
+<apex:page id="somethi" showHeader="true" standardStylesheets="false" controller="SearchEmployeesController">
 
 	<head>
 
@@ -21,6 +21,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	</head>
+
+	<style>
+		.container-fluid {
+			text-align: center;
+		}
+	</style>
 
 	<div class="container-fluid">
 

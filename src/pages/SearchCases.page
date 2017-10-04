@@ -1,4 +1,4 @@
-<apex:page controller="SearchCasesController">
+<apex:page showHeader="true" sidebar="false" controller="SearchCasesController">
 
 	<head>
 
@@ -21,6 +21,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	</head>
+
+	<style>
+		.container-fluid {
+			text-align: center;
+		}
+	</style>
 
 	<div class="container-fluid">
 	</div>
