@@ -1,6 +1,14 @@
-<apex:page >
-  <!-- Begin Default Content REMOVE THIS -->
-  <h1>Congratulations</h1>
-  This is your new Page
-  <!-- End Default Content REMOVE THIS -->
+<apex:page showHeader="false" sidebar="false" controller="OrderHistoryController">
+
+	<apex:repeat value="{!orders}" var="order">
+		<table border="1px" width="80%">
+			<tr>
+				<td width="10%">{!order.Name}</td>
+				<td width="20%">{!order.Customer__r.Name}</td>
+				<td width="10%">{!order.Order_Date__c}</td>
+				<td width="20%">{!order.Product_Purchased__r.Name}</td>
+			</tr>
+		</table>
+	</apex:repeat>
+	
 </apex:page>

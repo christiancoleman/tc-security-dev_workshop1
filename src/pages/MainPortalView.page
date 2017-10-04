@@ -1,49 +1,68 @@
 <apex:page showHeader="false" sidebar="false" controller="MainPortalViewController">
 	
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<head>
 
-<style>
-.content {
-    text-align: center;
-}
-</style>
+		<!-- Bootstrap - Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
-<div>
-	<div class="content">
-		<div>
-			Welcome to tc-security-dev's first workshop
+		<!-- Bootstrap - Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
+		<!-- jquery - Google CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Bootstrap - Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	</head>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div>
+				Cyberdyne Stores
+			</div>
 		</div>
-		<div>
-			<a href="/EmployeeView?firstname=Hariet">/apex/EmployeeView</a>
+		<div class="row">
+			<div>
+				Find products...
+			</div>
+			<div>
+				<input type="text" value=""/>
+			</div>
 		</div>
-		<div>
-			<a href="/CustomAdminControlPanel">/apex/CustomAdminControlPanel</a>
-		</div>
-		<div>
-			<a href="/CD_Login1">/apex/CD_Login1</a>
-		</div>
-		<div>
-			<a href="/CaseView">/apex/CaseView</a>
-		</div>
-		<div>
-			<a href="/TableOfContents">/apex/TableOfContents</a>
-		</div>
-		<div>
-			<a href="/OrderHistory">/apex/OrderHistory</a>
-		</div>
-		<div>
-			<a href="/ShoppingCart">/apex/ShoppingCart</a>
-		</div>
-		<div>
-			<a href="/SearchItems">/apex/SearchItems</a>
-		</div>
-		<div>
-			<a href="/ItemView">/apex/ItemView</a>
+		<div class="row">
+			<div>
+				<a href="/SearchEmployees?firstname=Hariet">Find employees</a>
+			</div>
+			<div>
+				<a href="/CustomAdminControlPanel">/apex/CustomAdminControlPanel</a>
+			</div>
+			<div>
+				<a href="/CD_Login1">/apex/CD_Login1</a>
+			</div>
+			<div>
+				<a href="/CaseView">/apex/CaseView</a>
+			</div>
+			<div>
+				<a href="/TableOfContents">/apex/TableOfContents</a>
+			</div>
+			<div>
+				<a href="/OrderHistory">/apex/OrderHistory</a>
+			</div>
+			<div>
+				<a href="/ShoppingCart">/apex/ShoppingCart</a>
+			</div>
+			<div>
+				<a href="/SearchItems">/apex/SearchItems</a>
+			</div>
+			<div>
+				<a href="/ItemView">/apex/ItemView</a>
+			</div>
 		</div>
 	</div>
-</div>
 
 </apex:page>
