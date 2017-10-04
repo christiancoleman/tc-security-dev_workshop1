@@ -23,6 +23,17 @@
 	</head>
 
 	<div class="container-fluid">
+		<apex:form>
+			<div class="row">
+				<apex:inputText value="{!username}"/>
+			</div>
+			<div class="row">
+				<apex:inputSecret value="{!password}"/>
+			</div>
+			<div>
+				<apex:commandButton action="{!login}" value="Login"/>
+			</div>
+		</apex:form>
 	</div>
 
 </apex:page>

@@ -65,6 +65,14 @@
 				<a href="/ItemView">/apex/ItemView</a>
 			</div>
 		</div>
+		<div class="row">
+			<div>
+				<a href="/CustomerLogin">Customer Login</a>
+			</div>
+			<div>
+				<a href="/EmployeeLogin">Employee Login</a>
+			</div>
+		</div>
 	</div>
 
 </apex:page>
