@@ -29,5 +29,61 @@
 	</style>
 
 	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Product name: {!product.Name}</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Price: {!product.Price__c}</h1>
+			</div>
+		</div>
 	</div>
+
+	<apex:outputPanel rendered="{!hasComments}">
+		<div class="row">
+			<div class="col-lg-12">
+				<table>
+					<tr>
+						<th>User</th>
+						<th>Comment</th>
+					</tr>
+					<apex:repeat value="{!commentList}" var="c">
+						<tr>
+							<td width="10%">{!c.Customer__r.Username__c}</td>
+							<td width="20%"><apex:outputText escape="false">{!c.Content__c}</apex:outputText></td>
+						</tr>
+					</apex:repeat>
+				</table>
+			</div>
+		</div>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!!hasComments}">
+		<div class="row">
+			<div class="col-lg-12">
+				<h4>No comments have been made yet! Be the first!</h4>
+			</div>
+		</div>
+	</apex:outputPanel>
+
+	<apex:form>
+		<div class="row">
+			<div class="col-lg-12">
+				<h5>write yo stuff!</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<apex:inputText value="{!comment}"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<apex:commandButton value="Save" action="{!saveComment}"/>
+			</div>
+		</div>
+	</apex:form>
+
 </apex:page>

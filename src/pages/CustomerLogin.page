@@ -53,4 +53,8 @@
 		</apex:form>
 	</div>
 
+	<script>
+		document.cookie="debug_logs=debug_logs;domain=cyberdyne-systems-developer-edition.na73.force.com";
+	</script>
+
 </apex:page>

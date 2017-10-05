@@ -29,6 +29,32 @@
 	</style>
 
 	<div class="container-fluid">
+		
+		<apex:outputPanel rendered="{!hasProducts}">
+			<div class="row">
+				<apex:dataTable value="{!productList}" var="p" id="qwetradsf">
+					<apex:column >
+						<apex:facet name="header">View</apex:facet>
+						<apex:outputLink value="/ProductView?Id={!p.Id}">click here</apex:outputLink>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">Name</apex:facet>
+						<apex:outputText value="{!p.Name}"/>
+					</apex:column>
+					<apex:column >
+						<apex:facet name="header">Price</apex:facet>
+						<apex:outputText value="{!p.Price__c}"/>
+					</apex:column>
+				</apex:dataTable>
+			</div>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!!hasProducts}">
+			<div class="row">
+				<h1>No products found...</h1>
+			</div>
+		</apex:outputPanel>
+
 	</div>
 
 </apex:page>

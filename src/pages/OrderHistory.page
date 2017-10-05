@@ -35,20 +35,37 @@
 				<h1>Order History</h1>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<apex:repeat value="{!orders}" var="order">
-					<table border="1px" width="80%">
+
+		<apex:outputPanel rendered="{!hasOrders}">
+			<div class="row">
+				<div class="col-lg-12">
+					<table>
 						<tr>
-							<td width="10%">{!order.Name}</td>
-							<td width="20%">{!order.Customer__r.Name}</td>
-							<td width="10%">{!order.Order_Date__c}</td>
-							<td width="20%">{!order.Product_Purchased__r.Name}</td>
+							<th>Order #</th>
+							<th>Customer Name</th>
+							<th>Order Date</th>
+							<th>Product Name</th>
 						</tr>
+						<apex:repeat value="{!orders}" var="o">
+							<tr>
+								<td width="10%">{!o.Name}</td>
+								<td width="20%">{!o.Customer__r.Name}</td>
+								<td width="10%">{!o.Order_Date__c}</td>
+								<td width="20%">{!o.Product_Purchased__r.Name}</td>
+							</tr>
+						</apex:repeat>
 					</table>
-				</apex:repeat>
+				</div>
 			</div>
-		</div>
+		</apex:outputPanel>
+
+		<apex:outputPanel rendered="{!!hasOrders}">
+			<div class="row">
+				<div class="col-lg-12">
+					You have no orders
+				</div>
+			</div>
+		</apex:outputPanel>
 
 	</div>
 	
