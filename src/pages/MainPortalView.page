@@ -1,5 +1,5 @@
 <apex:page showHeader="true" sidebar="false" controller="MainPortalViewController">
-	
+
 	<head>
 
 		<title>Cyberdyne! We sell things!</title>
@@ -74,13 +74,19 @@
 
 		<div class="row">
 			<div class="col-lg-12">
-				<apex:form>
+				<apex:form >
 					<a href="/SearchProducts">Find a product:</a>
 					&nbsp;
 					<apex:inputText value="{!searchTerm}"/>
 					<!-- <input type="text" value=""/> -->
 					<apex:commandButton value="Go" action="{!searchProductByName}"/>
 				</apex:form>
+			</div>
+		</div>
+
+		<div class="row" style="padding-top:20px;padding-bottom:20px;">
+			<div class="col-lg-12">
+					<a href="/productorder?discount=none&productType=Book">Product Order Page</a>
 			</div>
 		</div>
 
@@ -102,11 +108,8 @@
 
 		<apex:outputPanel rendered="{! isEmployee }">
 			<div class="row">
-				<div class="col-lg-6">
-					<a href="/SearchEmployees?firstname=Hariet">Find an employee:</a>
-				</div>
-				<div class="col-lg-6">
-					<input type="text" value=""/>
+				<div class="col-lg-12">
+					<a href="/SearchEmployees?q=Linus">Search all employees</a>
 				</div>
 			</div>
 		</apex:outputPanel>
